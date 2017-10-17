@@ -18,31 +18,12 @@ function increaseRankBy (n){
 return current
 }
 
-function deepestChild (){
-  function deepestChild (array, criteriaFn){
+  function deepestChild (criteriaFn){
             var current=document.getElementById('grand-node')
-            for (let i = 0; i < array.length; i++) {
-               if (criteriaFn(array[i])) {
-                 return array[i]
+            while (current) {
+               if (criteriaFn(current[i])) {
+                 return current[i]
                }
              }
            }
-         }
-         function find(array, criteriaFn) {
-           let current = array
-           let next = []
-           while (current) {
-             if (criteriaFn(current)) {
-               return current
-             }
-             if (Array.isArray(current)) {
-               for (let i = 0; i < current.length; i++) {
-                 next.push(current[i])
-               }
-             }
-  
-             current = next.shift()
-           }
-  
-           return null
-         }
+         
