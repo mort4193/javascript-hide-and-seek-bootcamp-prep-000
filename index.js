@@ -11,7 +11,7 @@ return sel
 function increaseRankBy (n){
   var current=document.querySelectorAll('ul.ranked-list li')
     for(let i=0; i<current.length; i++){
-  current[i].innerHtml=parseInt(i+n)
+  current[i].innerHtml=parseInt(current[i])+n
     }
 
     return current
