@@ -19,6 +19,30 @@ return current
 }
 
 function deepestChild (){
-    const anser = document.querySelector('main #grand-node.innerHTML')
-           return anser
+  function deepestChild (array, criteriaFn){
+            var current=document.getElementById('grand-node')
+            for (let i = 0; i < array.length; i++) {
+               if (criteriaFn(array[i])) {
+                 return array[i]
+               }
+             }
+           }
+         }
+         function find(array, criteriaFn) {
+           let current = array
+           let next = []
+           while (current) {
+             if (criteriaFn(current)) {
+               return current
+             }
+             if (Array.isArray(current)) {
+               for (let i = 0; i < current.length; i++) {
+                 next.push(current[i])
+               }
+             }
+  
+             current = next.shift()
+           }
+  
+           return null
          }
