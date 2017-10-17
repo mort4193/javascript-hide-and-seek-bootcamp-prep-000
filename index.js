@@ -19,8 +19,6 @@ return current
 }
 
 function deepestChild (){
-          var current=document.getElementById('grand-node'.div)
-var store=[]
-store.push(current)
-      return current
-  }
+    const anser = document.querySelector('main#grand-node.innerHTML')
+           return anser
+         }
