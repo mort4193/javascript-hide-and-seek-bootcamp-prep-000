@@ -23,7 +23,7 @@ return current
             var next=current.children[0]
             while (next) {
               current=next
-              next=current.children[0]         
+              next=current.children[0]
             }
             return current
            }
