@@ -18,11 +18,12 @@ function increaseRankBy (n){
 return current
 }
 
-  function deepestChild (criteriaFn){
+  function deepestChild (){
             var current=document.getElementById('grand-node')
-            while (current) {
-               if (criteriaFn(current[i])) {
-                 return current[i]
-               }
-             }
+            var next=current.children[0]
+            while (next) {
+              current=next
+              next=current.children[0]         
+            }
+            return current
            }
