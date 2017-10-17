@@ -9,14 +9,12 @@ return sel
 }
 
 function increaseRankBy (n){
-  var current=document.querySelectorAll(parseInt('ul.ranked-list'))
+  var current=document.querySelectorAll('ul.ranked-list li')
     for(let i=0; i<current.length; i++){
-    var  next=[]
-      next.push(current[i])
-      next+=n
+  current[i].innerHtml=parseInt(i+n)
     }
 
-    return next
+    return current
 }
 
 function deepestChild (){
