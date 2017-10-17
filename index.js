@@ -15,7 +15,7 @@ function increaseRankBy (n){
 return current
     }
 
-    
+
 }
 
 function deepestChild (){
