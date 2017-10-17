@@ -11,11 +11,11 @@ return sel
 function increaseRankBy (n){
   var current=document.querySelectorAll('ul.ranked-list')
     for(let i=0; i<current.length; i++){
-  current[i].innerHtml=parseInt(current[i].innerHtml)+n
-return current
+  current[i].innerHTML= parseInt(current[i].innerHTML)+n
+
     }
 
-
+return current
 }
 
 function deepestChild (){
